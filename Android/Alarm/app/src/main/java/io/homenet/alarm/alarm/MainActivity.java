@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     BufferedReader bw;
     private String addressIP;
     private int portNumber;
+    Socket socket = null;
 
 
     @Override
@@ -51,30 +52,32 @@ public class MainActivity extends AppCompatActivity {
 
             new Thread() {
                 public void run() {
-                    Socket socket = null;
+                    ApplicationUtil appUtil = (ApplicationUtil) MainActivity.this.getApplication();
+
                     try {
-                        socket = new Socket(addressIP, portNumber);
+                        appUtil.init(addressIP, portNumber);
+//                        socket = new Socket(addressIP, portNumber);
+
+                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString();
+//                        bundle.putString("addressIP",addressIP);
+//                        bundle.putInt("portNumber",portNumber);
+//                        intent.putExtras(bundle);
+
+                        startActivity(intent);
 
                     } catch (IOException e) {
                         e.printStackTrace();
                         System.out.println("服务器连接失败！！！！！");
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     } finally {
-                        try {
-                            socket.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+
                     }
                 }
             }.start();
 
-            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("addressIP",addressIP);
-            bundle.putInt("portNumber",portNumber);
-            intent.putExtras(bundle);
-
-            startActivity(intent);
         }
     };
 }
