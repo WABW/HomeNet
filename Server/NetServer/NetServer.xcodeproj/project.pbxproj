@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB8030CB1ED6D39F007E40DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB8030CA1ED6D39F007E40DD /* main.cpp */; };
+		DBE83BAD1EDAE72B000272D4 /* device_descriptor.c in Sources */ = {isa = PBXBuildFile; fileRef = DBE83BAB1EDAE72B000272D4 /* device_descriptor.c */; };
+		DBEF3E4C1EDAB83300DDEBE9 /* tcp_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEF3E4A1EDAB83300DDEBE9 /* tcp_server.cpp */; };
+		DBEF3E4F1EDABA8800DDEBE9 /* console_print.c in Sources */ = {isa = PBXBuildFile; fileRef = DBEF3E4D1EDABA8800DDEBE9 /* console_print.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB8030C51ED6D39F007E40DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DB8030C71ED6D39F007E40DD /* NetServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB8030CA1ED6D39F007E40DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DBE83BA91EDAC9AB000272D4 /* libevent-2.1.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libevent-2.1.6.dylib"; path = "../../../../../usr/local/Cellar/libevent/2.1.8/lib/libevent-2.1.6.dylib"; sourceTree = "<group>"; };
+		DBE83BAB1EDAE72B000272D4 /* device_descriptor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = device_descriptor.c; sourceTree = "<group>"; };
+		DBE83BAC1EDAE72B000272D4 /* device_descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device_descriptor.h; sourceTree = "<group>"; };
+		DBEF3E4A1EDAB83300DDEBE9 /* tcp_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_server.cpp; sourceTree = "<group>"; };
+		DBEF3E4B1EDAB83300DDEBE9 /* tcp_server.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tcp_server.hpp; sourceTree = "<group>"; };
+		DBEF3E4D1EDABA8800DDEBE9 /* console_print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = console_print.c; sourceTree = "<group>"; };
+		DBEF3E4E1EDABA8800DDEBE9 /* console_print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = console_print.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB8030C41ED6D39F007E40DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB8030BE1ED6D39F007E40DD = {
+			isa = PBXGroup;
+			children = (
+				DB8030C91ED6D39F007E40DD /* NetServer */,
+				DB8030C81ED6D39F007E40DD /* Products */,
+				DBE83BA81EDAC9AA000272D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB8030C81ED6D39F007E40DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB8030C71ED6D39F007E40DD /* NetServer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB8030C91ED6D39F007E40DD /* NetServer */ = {
+			isa = PBXGroup;
+			children = (
+				DB8030CA1ED6D39F007E40DD /* main.cpp */,
+				DBE83BAB1EDAE72B000272D4 /* device_descriptor.c */,
+				DBE83BAC1EDAE72B000272D4 /* device_descriptor.h */,
+				DBEF3E4A1EDAB83300DDEBE9 /* tcp_server.cpp */,
+				DBEF3E4B1EDAB83300DDEBE9 /* tcp_server.hpp */,
+				DBEF3E4D1EDABA8800DDEBE9 /* console_print.c */,
+				DBEF3E4E1EDABA8800DDEBE9 /* console_print.h */,
+			);
+			path = NetServer;
+			sourceTree = "<group>";
+		};
+		DBE83BA81EDAC9AA000272D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBE83BA91EDAC9AB000272D4 /* libevent-2.1.6.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB8030C61ED6D39F007E40DD /* NetServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB8030CE1ED6D39F007E40DD /* Build configuration list for PBXNativeTarget "NetServer" */;
+			buildPhases = (
+				DB8030C31ED6D39F007E40DD /* Sources */,
+				DB8030C41ED6D39F007E40DD /* Frameworks */,
+				DB8030C51ED6D39F007E40DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetServer;
+			productName = NetServer;
+			productReference = DB8030C71ED6D39F007E40DD /* NetServer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB8030BF1ED6D39F007E40DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Cirno MainasuK";
+				TargetAttributes = {
+					DB8030C61ED6D39F007E40DD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = Z68BDSMP42;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DB8030C21ED6D39F007E40DD /* Build configuration list for PBXProject "NetServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB8030BE1ED6D39F007E40DD;
+			productRefGroup = DB8030C81ED6D39F007E40DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB8030C61ED6D39F007E40DD /* NetServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB8030C31ED6D39F007E40DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBEF3E4C1EDAB83300DDEBE9 /* tcp_server.cpp in Sources */,
+				DB8030CB1ED6D39F007E40DD /* main.cpp in Sources */,
+				DBE83BAD1EDAE72B000272D4 /* device_descriptor.c in Sources */,
+				DBEF3E4F1EDABA8800DDEBE9 /* console_print.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB8030CC1ED6D39F007E40DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"/usr/local/include/\"";
+				LIBRARY_SEARCH_PATHS = "\"/usr/local/lib/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-levent";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DB8030CD1ED6D39F007E40DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"/usr/local/include/\"";
+				LIBRARY_SEARCH_PATHS = "\"/usr/local/lib/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-levent";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DB8030CF1ED6D39F007E40DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Z68BDSMP42;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libevent/2.1.8/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB8030D01ED6D39F007E40DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Z68BDSMP42;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libevent/2.1.8/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB8030C21ED6D39F007E40DD /* Build configuration list for PBXProject "NetServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB8030CC1ED6D39F007E40DD /* Debug */,
+				DB8030CD1ED6D39F007E40DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB8030CE1ED6D39F007E40DD /* Build configuration list for PBXNativeTarget "NetServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB8030CF1ED6D39F007E40DD /* Debug */,
+				DB8030D01ED6D39F007E40DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB8030BF1ED6D39F007E40DD /* Project object */;
+}
