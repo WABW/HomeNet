@@ -12,18 +12,20 @@
 #include <stdio.h>
 #include <sys/socket.h>
 
-#define ID_LEN      5
+#define ID_LEN      15
 
-enum {
-    ID_sensor = 1,
-    ID_alarm,
-    ID_server,
-    ID_web
+enum Device_Type {
+    ID_none,
+    ID_sensor = 'C',
+    ID_alarm = 'B',
+    ID_server = 'F',
+    ID_web = 'W'
 };
 
 typedef struct device_descriptor {
     char id[ID_LEN + 1];
     struct sockaddr_storage ss;
+    size_t tick;
 } *Device_Descriptor;
 
 #endif /* device_descriptor_h */
