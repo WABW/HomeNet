@@ -50,7 +50,9 @@ public class Main2Activity extends AppCompatActivity {
                         while (true) {
                             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                             String sentence = br.readLine();
-                            if(sentence == null) break;
+                            if(sentence == null) {
+                                break;
+                            }
                             else System.out.println("return from server: " + sentence);
                         }
                     } catch (IOException e) {
@@ -72,7 +74,7 @@ public class Main2Activity extends AppCompatActivity {
             try {
                 os = socket.getOutputStream();
                 System.out.println("Button click");
-                message = messageEditText.getText().toString();
+                message = "CT"+messageEditText.getText().toString();
                 System.out.println(message);
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
                 bw.write(message);
