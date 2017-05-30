@@ -7,14 +7,22 @@
 //
 
 #include <iostream>
-#include "tcp_server.hpp"
+#include <map>
 
+#include "tcp_server.hpp"
 
 int main(int argc, const char * argv[]) {
     struct event_base *base = event_base_new();
     int port = 6666;
 
-    TCPServer tcpServer = TCPServer(port);
+    Shunter shunter;
+    AlarmService as;
+    TemperatureService ts(as);
+
+    shunter.addService(ID_alarm, &as);
+    shunter.addService(ID_sensor, &ts);
+
+    TCPServer tcpServer(shunter, port);
     tcpServer.run(base);
 
     return 0;

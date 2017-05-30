@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB66C9171EDBC68500E5F187 /* shunter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB66C9151EDBC68500E5F187 /* shunter.cpp */; };
+		DB66C91A1EDBDDE400E5F187 /* temperature_service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB66C9181EDBDDE400E5F187 /* temperature_service.cpp */; };
+		DB66C91D1EDBDF5F00E5F187 /* alarm_service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB66C91B1EDBDF5F00E5F187 /* alarm_service.cpp */; };
+		DB66C9201EDBE82D00E5F187 /* udp_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB66C91E1EDBE82D00E5F187 /* udp_server.cpp */; };
 		DB8030CB1ED6D39F007E40DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB8030CA1ED6D39F007E40DD /* main.cpp */; };
 		DBE83BAD1EDAE72B000272D4 /* device_descriptor.c in Sources */ = {isa = PBXBuildFile; fileRef = DBE83BAB1EDAE72B000272D4 /* device_descriptor.c */; };
 		DBEF3E4C1EDAB83300DDEBE9 /* tcp_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEF3E4A1EDAB83300DDEBE9 /* tcp_server.cpp */; };
@@ -26,6 +30,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB66C9151EDBC68500E5F187 /* shunter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shunter.cpp; sourceTree = "<group>"; };
+		DB66C9161EDBC68500E5F187 /* shunter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shunter.hpp; sourceTree = "<group>"; };
+		DB66C9181EDBDDE400E5F187 /* temperature_service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = temperature_service.cpp; sourceTree = "<group>"; };
+		DB66C9191EDBDDE400E5F187 /* temperature_service.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = temperature_service.hpp; sourceTree = "<group>"; };
+		DB66C91B1EDBDF5F00E5F187 /* alarm_service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alarm_service.cpp; sourceTree = "<group>"; };
+		DB66C91C1EDBDF5F00E5F187 /* alarm_service.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = alarm_service.hpp; sourceTree = "<group>"; };
+		DB66C91E1EDBE82D00E5F187 /* udp_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = udp_server.cpp; sourceTree = "<group>"; };
+		DB66C91F1EDBE82D00E5F187 /* udp_server.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = udp_server.hpp; sourceTree = "<group>"; };
+		DB66C9281EDBF32700E5F187 /* server_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = server_context.h; sourceTree = "<group>"; };
+		DB66C92C1EDBFB8800E5F187 /* service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
 		DB8030C71ED6D39F007E40DD /* NetServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8030CA1ED6D39F007E40DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBE83BA91EDAC9AB000272D4 /* libevent-2.1.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libevent-2.1.6.dylib"; path = "../../../../../usr/local/Cellar/libevent/2.1.8/lib/libevent-2.1.6.dylib"; sourceTree = "<group>"; };
@@ -48,6 +62,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB66C9211EDBE85200E5F187 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				DBEF3E4A1EDAB83300DDEBE9 /* tcp_server.cpp */,
+				DBEF3E4B1EDAB83300DDEBE9 /* tcp_server.hpp */,
+				DB66C91E1EDBE82D00E5F187 /* udp_server.cpp */,
+				DB66C91F1EDBE82D00E5F187 /* udp_server.hpp */,
+				DB66C9281EDBF32700E5F187 /* server_context.h */,
+				DB66C9151EDBC68500E5F187 /* shunter.cpp */,
+				DB66C9161EDBC68500E5F187 /* shunter.hpp */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		DB66C9291EDBF9BD00E5F187 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				DBE83BAB1EDAE72B000272D4 /* device_descriptor.c */,
+				DBE83BAC1EDAE72B000272D4 /* device_descriptor.h */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		DB66C92A1EDBF9CB00E5F187 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB66C92C1EDBFB8800E5F187 /* service.h */,
+				DB66C9181EDBDDE400E5F187 /* temperature_service.cpp */,
+				DB66C9191EDBDDE400E5F187 /* temperature_service.hpp */,
+				DB66C91B1EDBDF5F00E5F187 /* alarm_service.cpp */,
+				DB66C91C1EDBDF5F00E5F187 /* alarm_service.hpp */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		DB66C92B1EDBF9D400E5F187 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DBEF3E4D1EDABA8800DDEBE9 /* console_print.c */,
+				DBEF3E4E1EDABA8800DDEBE9 /* console_print.h */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		DB8030BE1ED6D39F007E40DD = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				DB8030CA1ED6D39F007E40DD /* main.cpp */,
-				DBE83BAB1EDAE72B000272D4 /* device_descriptor.c */,
-				DBE83BAC1EDAE72B000272D4 /* device_descriptor.h */,
-				DBEF3E4A1EDAB83300DDEBE9 /* tcp_server.cpp */,
-				DBEF3E4B1EDAB83300DDEBE9 /* tcp_server.hpp */,
-				DBEF3E4D1EDABA8800DDEBE9 /* console_print.c */,
-				DBEF3E4E1EDABA8800DDEBE9 /* console_print.h */,
+				DB66C9291EDBF9BD00E5F187 /* Device */,
+				DB66C92A1EDBF9CB00E5F187 /* Service */,
+				DB66C9211EDBE85200E5F187 /* Server */,
+				DB66C92B1EDBF9D400E5F187 /* Misc */,
 			);
 			path = NetServer;
 			sourceTree = "<group>";
@@ -146,8 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBEF3E4C1EDAB83300DDEBE9 /* tcp_server.cpp in Sources */,
+				DB66C91D1EDBDF5F00E5F187 /* alarm_service.cpp in Sources */,
 				DB8030CB1ED6D39F007E40DD /* main.cpp in Sources */,
 				DBE83BAD1EDAE72B000272D4 /* device_descriptor.c in Sources */,
+				DB66C9171EDBC68500E5F187 /* shunter.cpp in Sources */,
+				DB66C91A1EDBDDE400E5F187 /* temperature_service.cpp in Sources */,
+				DB66C9201EDBE82D00E5F187 /* udp_server.cpp in Sources */,
 				DBEF3E4F1EDABA8800DDEBE9 /* console_print.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
